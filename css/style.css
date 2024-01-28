@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*
+    dark-blue: #003049;
+    red: #d62828;
+    orange: #f77f00;
+    yellow: #fcbf49;
+    white: #f1faee;
+*/
+/*General CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 1600px;
+    margin-inline: auto;
+}
+a,small, button, label, input{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* End of General CSS */
+
+/* Utility Classes */
+.w-50{
+    width: 50%;
+}
+
+.container {
+    width: 90%;
+    margin: 8rem auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.section-title{
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: #003049;
+    letter-spacing: .1rem;
+    position: relative;
+}
+
+.section-title::before, .section-title::after{
+    content: '';
+    display: inline-block;
+    height: 5px;
+    width: 50px;
+    background-color: #d62828;
+    position: relative;
+    bottom: 10px;
+}
+
+.section-title::before{right: 10px;}
+
+.section-title::after{ left: 10px; }
+
+.subtitle{
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+    color: #f77f00;
+    word-spacing: .3rem;
+}
+
+.sub-heading{
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    letter-spacing: .1rem;
+}
+.item-heading{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.item-text{
+    font-size: 1.6rem;
+    text-align: center;
+}
+/* End of Utility Class */
+
+/* Header CSS */
+header.fixed-flex{
+    display: flex;
+    background-color: #003049;
+    color: #f1faee;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header > div.logo{
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+}
+
+header > nav.header-nav > ul.link-flex {
+    display: flex;
+    gap: 2rem;
+}
+
+ul.link-flex  a {
+    color: #f1faee;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+}
+
+ul.link-flex a:is(:hover, :focus){
+    color: #d62828;
+}
+
+
+ul.link-flex a:hover::after{
+    display: block;
+    content: "";
+    height: 3px;
+    width: 100%;
+    margin-top: .5rem;
+    background-color: #f1faee;
+}
+/* End Header CSS */
+
+/*Home Section CSS*/
+section#home{
+    display: flex;
+    height: 100vh; 
+    position: relative;
+}
+
+section#home > div.first{
+    background-color: #d62828;
+}
+
+section#home > div.second{
+    background-color: #f77f00;
+}
+
+section#home > div.hero-text{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.hero-text > h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    color: #f1faee;
+    text-transform: capitalize;
+}
+
+div.hero-text > p {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #003049;
+    font-weight: 500;
+}
+/*End Home Section CSS*/
+
+/* About Section CSS */
+section.about > div.about-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #003049;
+}
+
+div.history, div.vision-mission{
+    width: 48%;
+}
+
+div.vision{
+    margin-bottom: 2rem;
+}
+section.about p {
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+section.about ul {
+    font-size: 1.6rem;
+}
+/* End About Section CSS */
+
+/* Services Section CSS */
+div.service-flex{
+    display: flex;
+    gap: 2rem;
+}
+
+div.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #003049;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 4px #000;
+    cursor: pointer;
+}
+
+div.service-item:is(:hover, :focus) {
+    background-color: #d62828;
+}
+div.service-item > i.bx{
+    font-size: 6rem;
+    color: #d62828;
+}
+
+div.service-item:is(:hover, :focus) >i.bx {
+    color: #f1faee;
+}
+
+div.service-item > h3.item-heading{
+    color: #f1faee;
+}
+
+div.service-item > h3.item-heading{
+    color: #f1faee;
+}
+
+div.service-item > p.item-text{
+    color: #f1faee;
+}
+/* End Services Section CSS */
+
+/* Feature Section CSS */
+div.features-flex{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;  
+}
+
+div.features-item{
+    background-color: #d62828;
+    color: #f1faee;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-items: space-between;
+    gap: 1rem;
+    padding: 3rem;
+    width: calc(33.33% - 2rem);
+    border-radius: 10px;
+    box-shadow: 2px 5px 4px #000;
+    cursor: pointer;
+}
+
+div.features-item:is(:hover, :focus){
+    background-color: #003049;
+}
+
+div.features-item > i.bx{
+    font-size: 6rem;
+    
+}
+
+div.features-item:is(:hover, :focus) >i.bx {
+    color: #d62828;
+}
+
+/* End Feature Section CSS */
+
+/* Gallery Section CSS */
+div.gallery-flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+div.gallery-flex > img{
+    display: block;
+    width: 300px;
+    height: auto;
+}
+/* End Gallery Section CSS */
+
+/* Contact Section CSS */ 
+div.contact-flex{
+    display: flex;
+    width: 80%;
+    margin-inline: auto;
+}
+
+div.contact-text{
+    width: 40%;
+}
+
+form.contact-form{
+    width: 60%;
+}
+
+
+
+div.flex{
+    margin-bottom: 2rem;
+}
+
+div.flex > i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #d62828;
+}
+
+div.flex > :is(a, address){
+    font-size: 1.6rem;
+    color: #000;
+}
+
+div.flex > :is(a:where(:hover, :focus)){
+    color: #f77f00
+}
+
+
+form.contact-form > div.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+div.input-group > label{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: #003049;
+}
+
+div.input-group > :is(input, textarea){
+    width: 100%;
+    font: inherit;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, .3);
+}
+
+div.input-group > input{
+    height: 50px;
+}
+
+form.contact-form > button.btn.btn-dark{
+    background-color: #003049;
+    padding: .75rem 1rem;
+    color: #f1faee;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    width: 100px;
+    text-transform: capitalize;
+    border-radius: .75rem;
+    letter-spacing: .1rem;
+}
+
+
+form.contact-form > button.btn.btn-dark:is(:hover, :focus){
+    background-color: transparent;
+    color: #003049;
+    border: 2px solid #003049;
+}
+/* End Contact Section CSS */ 
+
+/* Footer CSS */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #003049;
+    padding-block: 3rem;
+}
+
+footer > small{
+    font-size: 1.4rem;
+    color: #f77f00;
+}
+
+footer > p {
+    font-size: 1.6rem;
+    color: #f1faee;
+}
+/* End Footer CSS*/
