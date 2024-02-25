@@ -416,3 +416,137 @@ footer > p {
     color: #f1faee;
 }
 /* End Footer CSS*/
+
+/*
+
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV 
+*/
+
+
+@media screen and (min-width: 320px) and  (max-width:480px){
+
+    .section-title{
+        font-size: 3.2rem;
+    }
+
+    header.fixed-flex{
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+        position: relative;
+        padding: 10px 20px 40px;
+    }
+
+    header > div.logo {
+        margin-bottom: 20px;
+    }
+
+    header > nav.header-nav > ul.link-flex{
+        flex-direction: column;
+    }
+
+    section#home{
+        height: 50vh;
+    }
+
+    section#home > div.hero-text {
+        height: 50vh;
+        text-align: center;
+        padding-inline: .5rem;
+        
+    }
+
+    section#home > div.hero-text > h1{
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+    }
+
+    div.hero-text > p{
+        font-size: 2rem;
+    }
+
+    section.about > div.about-flex, div.service-flex, div.features-flex {
+        flex-direction: column;
+    }
+
+    div.history, div.vision-mission {
+        width: 100%;
+    }
+
+    div.features-item{
+        width: 100%;
+    }
+
+    div.contact-flex{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    div.contact-text, form.contact-form  {
+        width: 100%;
+    }
+
+    footer > small{
+        text-align: center;
+    }
+     
+}
+
+
+@media screen and (min-width: 482px) and  (max-width:768px){
+    body{
+        max-width: 100%;
+    }
+    header.fixed-flex{
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+        position: relative;
+        padding: 20px 10px;
+    }
+
+     section#home{
+        height: 50vh;
+    }
+
+    section#home > div.hero-text {
+        height: 50vh;
+        text-align: center; 
+    }
+
+    section#home > div.hero-text > h1{
+        font-size: 4.2rem;
+        margin-bottom: 2rem;
+    }
+
+    div.hero-text > p{
+        font-size: 2.4rem;
+    }
+
+    section#home > div.hero-text > h1{
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+    }
+
+    section#home > div.hero-text > h1{
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+    }
+
+    section.about > div.about-flex{
+        flex-direction: column;
+    }
+
+    div.history, div.vision-mission{
+        width: 100%;
+    }
+
+    div.service-item{
+        width: 50%;
+    }
+
+}
