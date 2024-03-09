@@ -122,24 +122,24 @@ header > div.logo{
     letter-spacing: .2rem;
 }
 
-header > nav.header-nav > ul.link-flex {
+header > nav.header-nav > menu.link-flex {
     display: flex;
     gap: 2rem;
 }
 
-ul.link-flex  a {
+menu.link-flex  a {
     color: #f1faee;
     font-size: 1.8rem;
     text-transform: capitalize;
     letter-spacing: .1rem;
 }
 
-ul.link-flex a:is(:hover, :focus){
+menu.link-flex a:is(:hover, :focus){
     color: #d62828;
 }
 
 
-ul.link-flex a:hover::after{
+menu.link-flex a:hover::after{
     display: block;
     content: "";
     height: 3px;
@@ -272,7 +272,7 @@ div.features-item{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-items: space-between;
+    justify-content: space-between;
     gap: 1rem;
     padding: 3rem;
     width: calc(33.33% - 2rem);
@@ -445,7 +445,7 @@ footer > p {
         margin-bottom: 20px;
     }
 
-    header > nav.header-nav > ul.link-flex{
+    header > nav.header-nav > menu.link-flex{
         flex-direction: column;
     }
 
@@ -497,7 +497,7 @@ footer > p {
 }
 
 
-@media screen and (min-width: 482px) and  (max-width:768px){
+@media screen and (min-width: 481px) and  (max-width:768px){
     body{
         max-width: 100%;
     }
@@ -508,6 +508,14 @@ footer > p {
         position: relative;
         padding: 20px 10px;
     }
+
+    header > div.logo {
+        margin-bottom: 20px;
+    }
+
+     header > nav.header-nav > menu.link-flex{
+        flex-wrap: wrap;
+     }
 
      section#home{
         height: 50vh;
@@ -537,6 +545,8 @@ footer > p {
         margin-bottom: 2rem;
     }
 
+    
+
     section.about > div.about-flex{
         flex-direction: column;
     }
@@ -545,8 +555,47 @@ footer > p {
         width: 100%;
     }
 
-    div.service-item{
-        width: 50%;
+    div.service-flex, div.features-flex{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
+    div.features-item{
+        width: auto;
+    }
+
+
+    div.contact-flex {
+        flex-direction: column;
+    }
+
+    div.contact-text, form.contact-form{
+        width: 90%;
+    }
+}
+
+
+/* 769px — 1024px: Small screens, laptops */
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+     div.service-flex, div.features-flex{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    div.service-item, div.features-item{
+        width: auto;
+    }
+
+}
+
+/* 1025px — 1200px: Desktops, large screens */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    div.service-flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
