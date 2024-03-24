@@ -154,14 +154,7 @@ section#home{
     display: flex;
     height: 100vh; 
     position: relative;
-}
-
-section#home > div.first{
-    background-color: #d62828;
-}
-
-section#home > div.second{
-    background-color: #f77f00;
+    background-image: linear-gradient(to right, #d62828 50%, #f77f00 50% );
 }
 
 section#home > div.hero-text{
